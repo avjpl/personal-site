@@ -58,6 +58,9 @@ const commonConfig = (env) => merge([
       PATHS.client,
       PATHS.app,
     ],
+    exclude: [
+      /node_modules\/(?!(dom7|swiper)\/).*/,
+    ],
   }),
   parts.loadFonts({
     options: {

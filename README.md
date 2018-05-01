@@ -1,1 +1,1 @@
-# ssr-skeleton
+# Personal photography site

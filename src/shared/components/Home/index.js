@@ -4,14 +4,14 @@ import React, { Component } from 'react';
 
 // import * as Actions from '../../redux/actions/commentsAction';
 
+import SimpleSlider from '../ui/Slider';
+
 if (process.env.WEBPACK) require('./home.pcss');
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        <p>Under construction</p>
-      </div>
+      <SimpleSlider />
     );
   }
 }

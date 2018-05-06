@@ -9,7 +9,7 @@ const { PATHS } = require('./webpack.constants');
 
 const env = process.env.NODE_ENV === 'development';
 
-const commonConfig = (env) => merge([
+const commonConfig = env => merge([
   {
     entry: [
       ...entries(env),

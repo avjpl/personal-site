@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:style:verbose": "stylelint app/**/*.css",
-    "lint:style:silent": "stylelint --silent app/**/*.css"
+    "lint:style:silent": "stylelint --silent app/**/*.css",
+    "test": "mocha"
   },
   "license": "MIT",
   "devDependencies": {
@@ -24,8 +25,10 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx-img-import": "^0.1.4",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^0.1.17",
     "compression": "^1.7.0",
     "copy-webpack-plugin": "^4.0.1",
@@ -92,9 +95,14 @@
   "dependencies": {
     "axios": "^0.16.2",
     "bunyan": "^1.8.10",
+    "chai": "^4.1.2",
     "cors": "^2.8.4",
+    "enzyme": "^3.3.0",
     "font-awesome": "^4.7.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.1.1",
     "node-fetch": "^1.7.3",
+    "proxyquire": "^2.0.1",
     "ramda": "^0.24.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
@@ -103,6 +111,7 @@
     "react-router-dom": "^4.1.1",
     "react-slick": "^0.22.3",
     "redux": "^3.7.2",
+    "sinon": "^5.0.3",
     "slick-carousel": "^1.8.1",
     "swiper": "^4.2.2",
     "whatwg-fetch": "^2.0.3"

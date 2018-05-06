@@ -1,0 +1,5 @@
+--compilers js:babel-core/register
+--require ./test/helper.js
+--recursive ./src/**/*.spec.js
+--check-leaks
+--reporter spec

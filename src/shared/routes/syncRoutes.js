@@ -1,6 +1,6 @@
 import Home from '../components/Home';
+import Portfolio from '../components/Portfolio';
 import About from '../components/About';
-import Topics from '../components/Topics';
 
 export const routes = [
   {
@@ -9,13 +9,13 @@ export const routes = [
     exact: true,
   },
   {
-    component: About,
-    path: '/about',
+    component: Portfolio,
+    path: '/portfolio',
     exact: true,
   },
   {
-    component: Topics,
-    path: '/topics',
+    component: About,
+    path: '/about',
     exact: true,
   },
 ];

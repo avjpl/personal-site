@@ -3,32 +3,32 @@ const webpack = require('webpack');
 
 const InlineChunkManifestHtmlWebpackPlugin = require('inline-chunk-manifest-html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
 
 exports.clean = (path, opts) => ({
   plugins: [
-    new CleanWebpackPlugin(path, opts)
+    new CleanWebpackPlugin(path, opts),
   ],
 });
 
 exports.html = (opts) => ({
   plugins: [
-    new HtmlWebpackPlugin(opts)
+    new HtmlWebpackPlugin(opts),
   ],
 });
 
 exports.InlineHtmlManifest = (opts) => ({
   plugins: [
-    new InlineChunkManifestHtmlWebpackPlugin(opts)
+    new InlineChunkManifestHtmlWebpackPlugin(opts),
   ],
 });
 
 exports.extractManifest = (opts) => ({
   plugins: [
-    new ManifestPlugin(opts)
+    new ManifestPlugin(opts),
   ],
 });
 
@@ -98,7 +98,7 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.(png|jpg|svg)$/,
+        test: /\.(png|jpg|svg|gif)$/,
         include,
         exclude,
 
@@ -122,7 +122,7 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
           },
           {
             loader: 'css-loader',
-            options: { importLoaders: 2 },
+            options: { importLoaders: 1 },
           },
           'sass-loader',
           'postcss-loader',

@@ -7,13 +7,13 @@ export const routes = [
     exact: true,
   },
   {
-    component: AsyncComponent(() => System.import('../components/About')),
-    path: '/about',
+    component: AsyncComponent(() => System.import('../components/Portfolio')),
+    path: '/portfolio',
     exact: true,
   },
   {
-    component: AsyncComponent(() => System.import('../components/Topics')),
-    path: '/topics',
+    component: AsyncComponent(() => System.import('../components/About')),
+    path: '/about',
     exact: true,
   },
 ];

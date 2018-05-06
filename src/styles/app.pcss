@@ -1,0 +1,110 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --lightgray: #959595;
+  --lightcoral: lightcoral;
+  --lightcyan: lightcyan;
+  --lightgoldenrodyellow: lightgoldenrodyellow;
+  --lightseagreen: lightseagreen;
+  --lightskyblue: lightskyblue;
+  --lightyellow: lightyellow;
+  --lightpink: lightpink;
+
+  --font-size-base: 1rem;
+  --line-height-base: 150%;
+  --letter-spacing--base: 2.3px;
+  --font-primary: effra, arial;
+
+  --font-weight-light: 100;
+  --font-weight-normal: 300;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --vertical-spacing: 10px;
+  --horizontal: 10px;
+
+  --container-default-width: 98%;
+  --container-max-width: 1200px;
+
+  --width-standard: {
+    width: var(--container-default-width);
+    /*max-width: var(--container-max-width);*/
+    margin: 0 auto;
+  }
+
+  @custom-media --viewport-small (width >= 576px);
+  @custom-media --viewport-medium (width >= 768px);
+  @custom-media --viewport-large (width >= 992px);
+  @custom-media --viewport-extralarge (width >= 1200px);
+
+  @custom-selector :--headings h1, h2, h3, h4, h5, h6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import "~swiper/dist/css/swiper.css";
+
+@import "reset.pcss";
+@import "fonts.pcss";
+@import "typography.pcss";
+@import "navigation.pcss";
+@import "temp.pcss";
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--black);
+  color: var(--lightgray);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing--base);
+  font-family: var(--font-primary);
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "hd"
+    "main"
+    "ft"
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "hd hd"
+    "main main"
+    "ft ft"
+  }
+}
+
+header {
+  grid-area: hd;
+}
+
+footer {
+  grid-area: ft;
+}
+
+main {
+  grid-area: main;
+}
+
+.wrapper {
+  @apply --width-standard;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  margin: 20px 0;
+}

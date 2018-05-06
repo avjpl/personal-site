@@ -7,7 +7,7 @@ import {
 
 import 'font-awesome/css/font-awesome.css';
 
-import '../app.pcss';
+import '../styles/app.pcss';
 import { configureStore } from '../shared/redux/store/configureStore';
 import App from '../shared/components/App';
 

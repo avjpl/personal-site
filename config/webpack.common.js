@@ -9,7 +9,7 @@ const { PATHS } = require('./webpack.constants');
 
 const env = process.env.NODE_ENV === 'development';
 
-const commonConfig = (env) => merge([
+const commonConfig = env => merge([
   {
     entry: [
       ...entries(env),
@@ -57,6 +57,9 @@ const commonConfig = (env) => merge([
     include: [
       PATHS.client,
       PATHS.app,
+    ],
+    exclude: [
+      /node_modules\/(?!(dom7|swiper)\/).*/,
     ],
   }),
   parts.loadFonts({

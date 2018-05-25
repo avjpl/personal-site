@@ -11,9 +11,8 @@ const productionConfig = merge([
     use: [
       {
         loader: 'css-loader',
-        options: { importLoaders: 2 },
+        options: { importLoaders: 1 },
       },
-      'sass-loader',
       'postcss-loader',
     ],
   }),
@@ -23,9 +22,15 @@ const productionConfig = merge([
       name: './images/[name].[ext]',
     },
   }),
-  parts.purifyCSS({
-    paths: glob.sync(`${ PATHS.app }/**/*.js`, { nodir: true }),
-  }),
+  /**
+   * purifycss-webpack  Error: undefined:4:47743: property missing ':'
+   *
+   * Github issue
+   * https://github.com/webpack-contrib/purifycss-webpack/issues/89
+   */
+  // parts.purifyCSS({
+  //   paths: glob.sync(`${ PATHS.app }/**/*.js`, { nodir: true }),
+  // }),
 ]);
 
 exports.productionConfig = productionConfig;

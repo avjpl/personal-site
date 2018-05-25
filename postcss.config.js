@@ -3,6 +3,10 @@ const path = require('path');
 module.exports = {
   syntax: 'postcss-scss',
   plugins: {
+    'postcss-import': {},
+    'postcss-cssnext': {
+      browsers: ['last 2 versions', '> 5%'],
+    },
     'postcss-flexbox': {},
     'postcss-each': {},
     'postcss-font-magician': {
@@ -14,15 +18,9 @@ module.exports = {
       },
     },
     'postcss-font-awesome': {},
-    'postcss-cssnext': {
-      browsers: ['last 3 versions', '> 5%'],
-    },
     'postcss-mixins': {},
-    'postcss-advanced-variables': {},
-    'postcss-nested': {},
-    'postcss-atroot': {},
-    'postcss-property-lookup': {},
-    'postcss-extend': {},
+    'precss': {},
+    'cssnano': {},
     'postcss-reporter': {
       clearMessages: true,
     },

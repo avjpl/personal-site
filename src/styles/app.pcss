@@ -1,3 +1,16 @@
+@import "swiper/dist/css/swiper.css";
+
+@import "reset.pcss";
+@import "fonts.pcss";
+@import "typography.pcss";
+@import "navigation.pcss";
+@import "temp.pcss";
+
+/* variable are correctly translated */
+@import "../shared/components/Home/home.pcss";
+@import "../shared/components/Portfolio/Portfolio.pcss";
+@import "../shared/components/About/about.pcss";
+
 :root {
   --black: #000;
   --white: #fff;
@@ -44,14 +57,6 @@
   box-sizing: border-box;
 }
 
-@import "~swiper/dist/css/swiper.css";
-
-@import "reset.pcss";
-@import "fonts.pcss";
-@import "typography.pcss";
-@import "navigation.pcss";
-@import "temp.pcss";
-
 html,
 body,
 #app {
@@ -68,6 +73,9 @@ body {
   font-family: var(--font-primary);
 }
 
+
+/* update to use flexbox as a fallback */
+/*
 .grid {
   display: grid;
   grid-gap: 20px;
@@ -99,12 +107,24 @@ main {
   grid-area: main;
 }
 
+*/
+
+/* flexbox */
 .wrapper {
+  display: flex;
+  flex-direction: column;
   @apply --width-standard;
   margin: 0 auto;
 }
 
 header,
 footer {
-  margin: 20px 0;
+  flex: 0 0 54px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+main {
+  flex: 1 1 auto;
 }

@@ -6,7 +6,8 @@ import React, { Component } from 'react';
 
 import SimpleSlider from '../ui/Slider';
 
-if (process.env.WEBPACK) require('./home.pcss');
+/* variable are not correctly translated */
+// if (process.env.WEBPACK) require('./home.pcss');
 
 class Home extends Component {
   render() {

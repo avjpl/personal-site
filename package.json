@@ -94,7 +94,7 @@
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bunyan": "^1.8.10",
     "chai": "^4.1.2",
     "cors": "^2.8.4",
@@ -106,13 +106,13 @@
     "proxyquire": "^2.0.1",
     "ramda": "^0.24.1",
     "react": "^16.3.0",
-    "react-dom": "^16.3.0",
+    "react-dom": "^16.3.3",
     "react-redux": "^5.0.6",
     "react-router-config": "^1.0.0-beta.3",
     "react-router-dom": "^4.1.1",
     "react-slick": "^0.22.3",
     "redux": "^3.7.2",
-    "sinon": "^5.0.3",
+    "sinon": "^16.1.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^4.2.2",
     "whatwg-fetch": "^2.0.3"
